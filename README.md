@@ -1,6 +1,6 @@
 # betterneptun
 Mini neptun alkalmazás megvalósítása:
--Szerepkörök(STUDENT,TEACHER,ADMIN)
+- Szerepkörök(STUDENT,TEACHER,ADMIN)
 - STUDENT jogosultságai:
   - COURSE-ok listázása
   - COURSE-ok szűrése
@@ -18,9 +18,9 @@ Mini neptun alkalmazás megvalósítása:
   - minden
 
 Esetleges további funkciók:
--Különböző jelentkezési intervallumok(ELŐ,RANGSOROLT,VERSENY)
--Besorolási módszerek COURSE felvételénél(RANGSORPONT,RANDOMPONT)
--Automatikus üzenet küldése COURSE-ok módosításánál(MESSAGES tábla)
+- Különböző jelentkezési intervallumok(ELŐ,RANGSOROLT,VERSENY)
+- Besorolási módszerek COURSE felvételénél(RANGSORPONT,RANDOMPONT)
+- Automatikus üzenet küldése COURSE-ok módosításánál(MESSAGES tábla)
 
 Adatbázis modell:
 
