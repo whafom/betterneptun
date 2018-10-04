@@ -2,11 +2,11 @@
 Mini neptun alkalmazás megvalósítása:
 - Szerepkörök(STUDENT,TEACHER,ADMIN)
 - STUDENT jogosultságai:
-  - COURSE-ok listázása
-  - COURSE-ok szűrése
+  - COURSE-ok és CONSULTS-ok listázása
+  - COURSE-ok és CONSULTS-ok szűrése
   - COURSE-ok felvétele
   - COURSE-ok leadása
-  - felvett COURSE-ok listázása
+  - felvett COURSE-ok és CONSULTS-ok listázása
   - saját adatok módosítása
 - TEACHER jogosultságai:
   - COURSE-ok és CONSULTS-ok hozzáadása
@@ -34,4 +34,4 @@ USERS_COURSES kapcsoló tábla
 USERS_ID(STUDENT,sok-sok) COURSES_ID
 
 CONSULTS tábla
-ID NAME ROOM TIME USERS_ID(TEACHER,egy-sok)
+ID NAME ROOM TIME COURSES_ID(egy-sok)
