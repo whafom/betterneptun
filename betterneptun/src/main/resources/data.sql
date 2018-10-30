@@ -1,15 +1,15 @@
 INSERT INTO
-    users(id,email,name,password,role_enum)
+    users(id,email,name,password,role)
 VALUES
     (1,'test email','test name','test password','TEACHER');
 INSERT INTO
-    users(id,email,name,password,role_enum)
+    users(id,email,name,password,role)
 VALUES
     (2,'test email2','test name2','test password2','STUDENT');
 
 	
 INSERT INTO
-    courses(id,max_space,name,room,taken_space,time_day,time_hour,type_enum,user_id)
+    courses(id,max_space,name,room,taken_space,time_day,time_hour,type,user_id)
 VALUES
     (1,40,'test name','test room',0,'test time_day','test time_hour','EA',1);
 

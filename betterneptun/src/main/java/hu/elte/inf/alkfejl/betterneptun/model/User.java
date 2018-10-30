@@ -27,7 +27,7 @@ import java.util.List;
 @Table(name = "users")
 public class User implements Serializable {
 
-    private enum RoleEnum {
+    public enum Role {
 
         STUDENT, TEACHER, ADMIN
     }
@@ -47,7 +47,7 @@ public class User implements Serializable {
 
     @Column
     @Enumerated(EnumType.STRING)
-    private RoleEnum roleEnum;
+    private Role role;
 
     @OneToMany(mappedBy = "user")
     private List<Course> courses;

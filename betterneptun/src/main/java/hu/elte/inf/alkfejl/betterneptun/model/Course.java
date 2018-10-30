@@ -30,7 +30,7 @@ import java.util.List;
 @Table(name = "courses")
 public class Course implements Serializable {
 
-    private enum TypeEnum {
+    private enum Type {
 
         EA, GY,
     }
@@ -59,7 +59,7 @@ public class Course implements Serializable {
 
     @Column
     @Enumerated(EnumType.STRING)
-    private TypeEnum typeEnum;
+    private Type type;
 
     @OneToMany(mappedBy = "course")
     private List<Consultation> consultations;
