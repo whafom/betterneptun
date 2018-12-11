@@ -6,9 +6,7 @@ import java.util.Optional;
 
 import org.springframework.data.repository.CrudRepository;
 
-public interface UserRepository extends CrudRepository<User, Long> {
+public interface UserRepository extends CrudRepository<User, Integer> {
 
-    Optional<User> findByNameAndPassword(String name, String password);
-
-    User findByName(String name);
+    Optional<User> findByName(String name);
 }

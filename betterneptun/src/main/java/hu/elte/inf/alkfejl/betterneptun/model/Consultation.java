@@ -25,8 +25,8 @@ import java.io.Serializable;
 public class Consultation implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private int id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int consultationNo;
 
     @Column
     private String name;

@@ -22,6 +22,7 @@ import javax.persistence.ManyToMany;
 
 import java.io.Serializable;
 import java.util.List;
+import javax.persistence.CascadeType;
 
 @Data
 @AllArgsConstructor
@@ -36,8 +37,8 @@ public class Course implements Serializable {
     }
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private int id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int courseNo;
 
     @Column
     private String name;
@@ -61,7 +62,7 @@ public class Course implements Serializable {
     @Enumerated(EnumType.STRING)
     private Type type;
 
-    @OneToMany(mappedBy = "course")
+    @OneToMany(mappedBy = "course",cascade = CascadeType.ALL)
     private List<Consultation> consultations;
 
     @ManyToOne
@@ -69,7 +70,7 @@ public class Course implements Serializable {
     @JsonIgnore
     private User user;
 
-    @ManyToMany
+    @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinTable
     private List<User> users;
 }

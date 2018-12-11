@@ -1,0 +1,19 @@
+package hu.elte.inf.alkfejl.betterneptun;
+
+import org.springframework.stereotype.Component;
+import org.springframework.web.context.annotation.RequestScope;
+
+import hu.elte.inf.alkfejl.betterneptun.model.User;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@RequestScope
+@Component
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class AuthenticatedUser {
+
+    private User user;
+}

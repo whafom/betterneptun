@@ -19,6 +19,7 @@ import javax.persistence.ManyToMany;
 
 import java.io.Serializable;
 import java.util.List;
+import javax.persistence.CascadeType;
 
 @Data
 @AllArgsConstructor
@@ -33,23 +34,23 @@ public class User implements Serializable {
     }
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private int id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int userNo;
 
-    @Column
+    @Column(nullable = false)
     private String name;
 
-    @Column
+    @Column(nullable = false)
     private String email;
 
-    @Column
+    @Column(nullable = false)
     private String password;
 
-    @Column
+    @Column(nullable = false)
     @Enumerated(EnumType.STRING)
     private Role role;
 
-    @OneToMany(mappedBy = "user")
+    @OneToMany(mappedBy = "user",cascade = CascadeType.ALL)
     private List<Course> courses;
 
     @ManyToMany(mappedBy = "users")
