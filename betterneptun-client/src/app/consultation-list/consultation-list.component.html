@@ -1,0 +1,10 @@
+<div class="card" *ngFor="let consultation of consultations | async">
+  <div class="card-body">
+    <h5 class="card-name">{{ consultation.name }}</h5>
+    <p class="card-room">{{ consultation.room }}</p>
+	<p class="card-timeDay">{{ consultation.timeDay }}</p>
+	<p class="card-timeHour">{{ consultation.timeHour }}</p>
+    <a routerLink="/consultation/{{ consultation.consultationNo }}/edit" class="card-link">Edit</a>
+    <a routerLink="/consultation/{{ consultation.consultationNo }}/confirm-delete" class="card-link">Delete</a>
+  </div>
+</div>

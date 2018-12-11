@@ -1,0 +1,70 @@
+<form #form="ngForm" (ngSubmit)="handleSubmit(form)">
+  <div class="form-group">
+    <label>Name</label>
+    <input
+      type="text"
+      class="form-control"
+      required
+      name="name"
+      [(ngModel)]="course.name"
+      #titleControl="ngModel"
+      [ngClass]="{ 'is-invalid': titleControl.touched && titleControl.invalid }">
+  </div>
+  <div class="form-group">
+    <label>Room</label>
+    <input
+      type="text"
+      class="form-control"
+      required
+      name="room"
+      [(ngModel)]="course.room"
+      #titleControl="ngModel"
+      [ngClass]="{ 'is-invalid': titleControl.touched && titleControl.invalid }">
+  </div>
+  <div class="form-group">
+    <label>TimeDay</label>
+    <input
+      type="text"
+      class="form-control"
+      required
+      name="timeDay"
+      [(ngModel)]="course.timeDay"
+      #titleControl="ngModel"
+      [ngClass]="{ 'is-invalid': titleControl.touched && titleControl.invalid }">
+  </div>
+  <div class="form-group">
+    <label>TimeHour</label>
+    <input
+      type="text"
+      class="form-control"
+      required
+      name="timeHour"
+      [(ngModel)]="course.timeHour"
+      #titleControl="ngModel"
+      [ngClass]="{ 'is-invalid': titleControl.touched && titleControl.invalid }">
+  </div>
+  <div class="form-group">
+    <label>MaxSpace</label>
+    <input
+      type="number"
+      class="form-control"
+      required
+      name="maxSpace"
+      [(ngModel)]="course.maxSpace"
+      #titleControl="ngModel"
+      [ngClass]="{ 'is-invalid': titleControl.touched && titleControl.invalid }">
+  </div>
+  <div class="form-group">
+    <label>Type</label>
+    <input
+      type="text"
+      class="form-control"
+      required
+      name="type"
+      [(ngModel)]="course.type"
+      #titleControl="ngModel"
+      [ngClass]="{ 'is-invalid': titleControl.touched && titleControl.invalid }">
+  </div>
+  <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Save</button>
+  <button type="button" class="btn btn-link" routerLink="/home">Cancel</button>
+</form>

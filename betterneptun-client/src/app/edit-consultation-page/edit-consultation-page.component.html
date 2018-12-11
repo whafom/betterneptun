@@ -1,0 +1,48 @@
+<form #form="ngForm" (ngSubmit)="handleSubmit(form)">
+  <div class="form-group">
+    <label>Name</label>
+    <input
+      type="text"
+      class="form-control"
+      required
+      name="name"
+      [(ngModel)]="consultation.name"
+      #titleControl="ngModel"
+      [ngClass]="{ 'is-invalid': titleControl.touched && titleControl.invalid }">
+  </div>
+  <div class="form-group">
+    <label>Room</label>
+    <input
+      type="text"
+      class="form-control"
+      required
+      name="room"
+      [(ngModel)]="consultation.room"
+      #titleControl="ngModel"
+      [ngClass]="{ 'is-invalid': titleControl.touched && titleControl.invalid }">
+  </div>
+  <div class="form-group">
+    <label>TimeDay</label>
+    <input
+      type="text"
+      class="form-control"
+      required
+      name="timeDay"
+      [(ngModel)]="consultation.timeDay"
+      #titleControl="ngModel"
+      [ngClass]="{ 'is-invalid': titleControl.touched && titleControl.invalid }">
+  </div>
+  <div class="form-group">
+    <label>TimeHour</label>
+    <input
+      type="text"
+      class="form-control"
+      required
+      name="timeHour"
+      [(ngModel)]="consultation.timeHour"
+      #titleControl="ngModel"
+      [ngClass]="{ 'is-invalid': titleControl.touched && titleControl.invalid }">
+  </div>
+  <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Save</button>
+  <button type="button" class="btn btn-link" routerLink="/consultation">Cancel</button>
+</form>

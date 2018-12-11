@@ -1,0 +1,4 @@
+<div *ngIf="(course | async) as p">
+    <h5>Are you sure you want to delete "{{ p.name }}"?</h5>
+    <button type="button" class="btn btn-danger" (click)="confirm(p.courseNo)">Confirm</button>
+</div>
